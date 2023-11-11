@@ -3,23 +3,40 @@ import styles from './LoginPage.module.css'
 import { Link,  useNavigate } from "react-router-dom";
 import { FC } from 'react'
 import { auth } from '../../firebase'
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
-import { FaGoogle } from "react-icons/fa6";
+import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { FaGoogle,FaGithub } from "react-icons/fa6";
 
 
 const LoginPage:FC=()=>{
     const navigate=useNavigate()
     const signIn = async () => {
-        const provider = new GoogleAuthProvider();
-    
+        const provider = new GoogleAuthProvider() ;
+      
+       
         try {
           await signInWithPopup(auth, provider)
-          .then(r=>{
+          .then(result=>{
             navigate("/User")
           });
         } catch (error) {
           console.log(error);
         }
+        
+      }
+
+      const signInGit = async () => {
+        const provider = new GithubAuthProvider() ;
+      
+       
+        try {
+          await signInWithPopup(auth, provider)
+          .then(result=>{
+            navigate("/User")
+          });
+        } catch (error) {
+          console.log(error);
+        }
+        
       }
     return(
         <div className={styles.login}>
@@ -33,10 +50,15 @@ const LoginPage:FC=()=>{
             <button className={styles.loginbtn}>
            <Link  className={styles.link}to="/User">Login</Link>
            </button>
-
-           <button onClick={signIn} className={styles.signin}>
+        <div className={styles.fasign}>
+        <button onClick={signIn} className={styles.signin}>
            <FaGoogle/>
     </button>
+    <button onClick={signInGit} className={styles.signingit}>
+    <FaGithub/>
+    </button>
+        </div>
+       
             </div>
           
             </div>
