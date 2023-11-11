@@ -1,0 +1,53 @@
+.box {
+    width: 100%;
+    z-index: -1;
+    background-color: rgb(126, 126, 126);
+    display: flex;
+    height: 92vh;
+    align-items: center;
+    gap: 90px;
+    justify-content: center
+}
+
+.person {
+    border: 3px solid rgb(255, 255, 255);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.man {
+    font-size: 140px;
+}
+
+.page {
+    color: #fff;
+ 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+    gap: 20px;
+}
+
+.edit {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.info {
+    padding: 30px;
+    color: #fff;
+}
+
+.infobox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    gap: 45px;
+}

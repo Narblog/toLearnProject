@@ -1,0 +1,79 @@
+.loginpage {
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 480px;
+    text-align: center;
+    border-radius: 22px;
+    padding: 40px 5px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #6ba3d1, #6e9cd9, #7c93de, #9287dd, #ab78d5, #ab7bda, #ac7fe0, #ac82e5, #8f98f6, #72acff, #5fbdff, #5fcbfb);
+    width: 100%;
+    height: 100vh;
+}
+
+.input {
+   padding: 10px 60px;
+    outline: none;
+    border-radius: 25px;
+    transition: .3s ease;
+    border: 3px solid #69bff8;
+    color:#ab7bda;
+    margin-top:30px; 
+}
+.forma{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    margin-top: 40px;
+    padding:0 30px;
+}
+.loginbtn {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    width: 330px;
+    height: 46px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 40px;
+    color:#fff;
+    font-size:30px;
+    cursor: pointer;
+}
+.loginpage h2{
+    font-weight: 900;
+    font-size: 40px;
+}
+.link{
+    text-decoration: none;
+    color:#fff;
+}
+.loginbtn:hover{
+    color:rgb(185, 185, 185);
+    background-image: linear-gradient(to right, #6bd1b8, #3bccd9, #44c2f2, #80b2f9, #b99ee8, #e191d0, #f989ad, #ff8b86, #ff9e5e, #f4bc36, #c3de29, #5cfc60)
+}
+
+
+.signin {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: brown;
+    color: #fff;
+    transition: all 0.3s;
+  }
+  
+  .signin:hover {
+    background-color: rgb(230, 72, 72);
+    cursor: pointer;
+  }
+  .signinbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+  }

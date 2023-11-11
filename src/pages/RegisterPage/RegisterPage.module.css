@@ -1,0 +1,53 @@
+.RegisterPage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    background-image: linear-gradient(to right top, #6ba3d1, #6e9cd9, #7c93de, #9287dd, #ab78d5, #ab7bda, #ac7fe0, #ac82e5, #8f98f6, #72acff, #5fbdff, #5fcbfb);
+}
+.Register{
+    width:400px;
+    height: 560px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.Register input {
+    padding: 10px 60px;
+     outline: none;
+     border-radius: 25px;
+     transition: .3s ease;
+     border: 3px solid #69bff8;
+     color:#ab7bda;
+     margin-top:30px; 
+ }
+ .Register h2{
+    font-weight: 900;
+    font-size: 40px;
+}
+.loginbtn {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    width: 330px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 40px;
+    color:#fff;
+    font-size:30px;
+    margin-top:70px;
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+    color:#fff;
+}
+.loginbtn:hover{
+    color:rgb(185, 185, 185);
+    background-image: linear-gradient(to right, #6bd1b8, #3bccd9, #44c2f2, #80b2f9, #b99ee8, #e191d0, #f989ad, #ff8b86, #ff9e5e, #f4bc36, #c3de29, #5cfc60)
+}

@@ -1,0 +1,28 @@
+.sidebar{
+    width:300px;
+    z-index: 2;
+    background-color: rgb(66, 66, 66);
+    float: left;
+    position: fixed;
+    height: 100%;
+     overflow: auto;
+     color:#fff;
+    
+}
+.sidebarmenu{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding-left:10px;
+    font-size:28px;
+    
+}
+.sidebarmenu a{
+    color:#fff;
+    text-decoration: none;
+}
+.sidebar p{
+    font-size:32px;
+    color:#fff;
+    padding-left:10px;
+}

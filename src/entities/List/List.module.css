@@ -1,0 +1,44 @@
+.list{
+    width:220px;
+    height: 290px;
+    background-color: rgb(148, 148, 148);
+    margin-left:10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:40px;
+    border-radius:15px;
+    color:#fff;
+   
+}
+.list input {
+    border-radius: 10px;
+    outline: 2px solid #e6e4e4;
+    border: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #e2e2e2;
+    outline-offset: 3px;
+    padding: 10px 1rem;
+    transition: 0.25s;
+    width:180px;
+    height: 80px;;
+  }
+  
+ .list  input:focus {
+    outline-offset: 5px;
+    background-color: #fff
+  }
+.list button{
+    outline: none;
+    border:none;
+    background-color: darkseagreen;
+    color:#fff;
+    width:180px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+.list button:hover{
+    background-color: rgb(70, 169, 136);
+}
