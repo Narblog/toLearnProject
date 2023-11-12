@@ -23,12 +23,12 @@
     transition: .3s ease;
     border: 3px solid #69bff8;
     color:#ab7bda;
-    margin-top:30px; 
+    margin-top:20px; 
 }
 .forma{
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap:5px;
     margin-top: 40px;
     padding:0 30px;
 }

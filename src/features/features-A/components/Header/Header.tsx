@@ -8,6 +8,7 @@ import { HeaderProps } from "./Header.interface";
 
 const Header: React.FC<HeaderProps> = ({ user }) => {
   const [isUserMenuOpen, setUserMenuOpen] = useState<boolean>(false)
+  
 
   const toggleUserMenu = (): void => {
     setUserMenuOpen(!isUserMenuOpen);

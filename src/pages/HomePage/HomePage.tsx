@@ -11,9 +11,9 @@ const HomePage: React.FC = () => {
             <nav >
                 <h1>ToLearn</h1>
                 <div>
-                    <Link to="/">Home</Link>
-                    <Link to="/Login">Sign In</Link>
-                    <Link to="/Register">Sign Up</Link>
+                 
+                    <Link to="/Login" >Sign In</Link>
+                    <Link to="/Register" className={styles.register}>Sign Up</Link>
                 </div>
             </nav>
             <div className={styles.box}>

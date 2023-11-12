@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    flex-direction: column;;
     background-image: linear-gradient(to right top, #6ba3d1, #6e9cd9, #7c93de, #9287dd, #ab78d5, #ab7bda, #ac7fe0, #ac82e5, #8f98f6, #72acff, #5fbdff, #5fcbfb);
 }
 .Register{
@@ -25,7 +25,7 @@
      transition: .3s ease;
      border: 3px solid #69bff8;
      color:#ab7bda;
-     margin-top:30px; 
+   margin-top:15px; 
  }
  .Register h2{
     font-weight: 900;
@@ -37,10 +37,10 @@
     height: 45px;
     border: none;
     border-radius: 25px;
-    margin-top: 40px;
+  
     color:#fff;
     font-size:30px;
-    margin-top:70px;
+    margin-top:40px;
     cursor: pointer;
 }
 .link{
@@ -51,3 +51,49 @@
     color:rgb(185, 185, 185);
     background-image: linear-gradient(to right, #6bd1b8, #3bccd9, #44c2f2, #80b2f9, #b99ee8, #e191d0, #f989ad, #ff8b86, #ff9e5e, #f4bc36, #c3de29, #5cfc60)
 }
+.signin {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: brown;
+    color: #fff;
+    transition: all 0.3s;
+  }
+  
+  .signin:hover{
+    background-color: rgb(230, 72, 72);
+    cursor: pointer;
+  }
+  .signingit{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(24, 24, 24);
+    color: #fff;
+    transition: all 0.3s;
+  }
+  .signingit:hover {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  .signinbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+  }
+  .fasign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+  }
+
+  .Registration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
+  }
