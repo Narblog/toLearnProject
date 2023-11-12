@@ -8,23 +8,22 @@ import { addDoc, collection } from "firebase/firestore";
 
 const RegisterPage: React.FC<RegisterProps> = (props) => {
     const [user, setUser] = useState({ name: "", email: "", password: "" })
-   
     const { signIn, signInGit } = props
-
-    /********************* ************************  
-     * 
-     *  const employeelist=collection(db,"employees")
-    const handleSubmit= async (MouseEvent:React.FormEvent<HTMLFormElement>)=>{
-        MouseEvent.preventDefault()
+    const employeelist=collection(db,"employees")
+    
+    /********************* ************************ 
+    const handleSubmit= async event=>{
+    event.preventDefault()
         await addDoc(employeelist,user)
         setUser({
             name:"",
             email:"",
             password:""
         })
+    }
 
            
-    } /********************* ************************  */
+    /********************* ************************  */
     return (
         <div className={styles.RegisterPage}>
 
