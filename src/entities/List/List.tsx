@@ -1,5 +1,4 @@
 import React,{useState} from "react";
-import styles from "./List.module.css"
 import Modal from "entities/Modal";
 const List: React.FC = () => {
     const [isOpen, setIsOpen] = useState<Boolean> (false) 
@@ -10,7 +9,13 @@ const List: React.FC = () => {
                 <div className="card-body">
                     <div className="list-group">
                         <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
-                        <button onClick={()=>setIsOpen(!isOpen)} > isOpen</button>          
+                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
+                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
+                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
+                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
+                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
+                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
+                           
                     </div>
                 </div>
             </div>
@@ -20,6 +25,10 @@ const List: React.FC = () => {
                     consectetur adipisicing elit.
                     vitae nam maxime temporibus nihil assumenda!</p>
             </Modal>
+            <button onClick={()=>setIsOpen(!isOpen)} >
+               
+                
+                 isOpen</button> 
         </div>
     )
 }
