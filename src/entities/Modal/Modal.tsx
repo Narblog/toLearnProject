@@ -1,12 +1,11 @@
-import React, { FC,ReactNode, useEffect, useState,useRef } from 'react';
+import React, { FC,ReactNode, useEffect, useRef } from 'react';
 import styles from "./Modal.module.css"
 
 
 interface ModalProps{
     children: ReactNode;
-    setState: React.Dispatch<React.SetStateAction<boolean>>;
-
-  
+    isOpen:Boolean;
+    setIsOpen: React.Dispatch<React.SetStateAction<Boolean>>;
 }
 
 const Modal: FC<ModalProps> = ({children,isOpen,setIsOpen}) => {
@@ -27,7 +26,7 @@ const Modal: FC<ModalProps> = ({children,isOpen,setIsOpen}) => {
     return (
         <>
             {
-                isOpen && <div ref={modalRef} className={styles.modal}>{children}</div>
+                isOpen  ? <div ref={modalRef} className={styles.modal}>{children}</div>:null
             }
         </>
     )
