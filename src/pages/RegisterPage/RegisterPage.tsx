@@ -3,13 +3,12 @@ import styles from "./RegisterPage.module.css"
 import { Link } from "react-router-dom";
 import { FaGoogle, FaGithub } from "react-icons/fa6";
 import { RegisterProps } from "features/features-A/components/Header/Header.interface";
-import { db } from "firebase";
-import { addDoc, collection } from "firebase/firestore";
+
 
 const RegisterPage: React.FC<RegisterProps> = (props) => {
     const [user, setUser] = useState({ name: "", email: "", password: "" })
     const { signIn, signInGit } = props
-    const employeelist=collection(db,"employees")
+   
     
     /********************* ************************ 
     const handleSubmit= async event=>{
