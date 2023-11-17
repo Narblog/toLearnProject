@@ -9,3 +9,16 @@ export interface HeaderProps {
     signIn?: () => void,
     signInGit?:()=>void,
   }
+  
+
+  export interface CommentProps {
+    id: number;
+    title: string;
+    content: string;
+    
+  }
+  export interface CommentsProps {
+    comments?: CommentProps[];
+  
+  
+  }

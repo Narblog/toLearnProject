@@ -1,35 +1,43 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Modal from "entities/Modal";
-const List: React.FC = () => {
-    const [isOpen, setIsOpen] = useState<Boolean> (false) 
+import { FaPen } from "react-icons/fa6";
+import styles from "./List.module.css"
+
+const List: React.FC<any> = ({ news }) => {
+    const [isOpen, setIsOpen] = useState<Boolean>(true)
     return (
-        <div >
+        <div className={styles.list}>
             <div className="card text-bg-light mb-3" >
                 <div className="card-header">Done</div>
                 <div className="card-body">
                     <div className="list-group">
-                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
-                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
-                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
-                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
-                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
-                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
-                        <a href="#" className="list-group-item list-group-item-action">A second link item 1</a> 
-                           
+                        {
+                            news.map((item: any) => {
+                                return (
+                                    <div key={item.id} >
+                                        <a className="list-group-item list-group-item-action"><h1>{item.title}</h1>
+                                            <p>{item.content} <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
+                                                <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+                                                    <h2>Comment</h2>
+                                                    <input type="text" />
+
+
+                                                </Modal><FaPen />
+
+
+                                            </button></p></a>
+                                    </div>
+                                )
+
+                            })
+                        }
+
                     </div>
                 </div>
             </div>
-            <Modal isOpen={isOpen} setIsOpen={setIsOpen} >
-                <h1>Modal</h1>
-                <p>Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit.
-                    vitae nam maxime temporibus nihil assumenda!</p>
-            </Modal>
-            <button onClick={()=>setIsOpen(!isOpen)} >
-               
-                
-                 isOpen</button> 
+
+
         </div>
     )
 }
-export default List
+export default List 

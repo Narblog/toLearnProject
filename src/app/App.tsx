@@ -7,15 +7,33 @@ import TablePage from "pages/TablePage"
 import UserPage from "pages/UserPage"
 import "./styles/index.scss"
 
+
+
 const App:React.FC=()=>{
-  
+    const news=[
+        {
+            id: 1,
+            title: 'New title 1',
+            content: 'News Content 1',
+        },
+        {
+            id: 2,
+            title: 'New title 2',
+            content: 'News Content 2',
+        },
+        {
+            id: 3,
+            title: 'New title 3',
+            content: 'News Content 333',
+        },
+    ]
     return(
         <BrowserRouter>
          <div>
             <Routes>
                 <Route path="/User" element={<UserPage/>}/>
                 <Route path="/"  element={<HomePage/>}/>
-                <Route path="/Table" element={<TablePage/>}/>
+                <Route path="/Table" element={<TablePage news={news}/>}/>
                 <Route path="/Register" element={<RegisterPage/>}/>
                 <Route path="/Login" element={<LoginPage/>}/>
             </Routes>
