@@ -8,9 +8,9 @@ export interface HeaderProps {
   export interface RegisterProps {
     signIn?: () => void,
     signInGit?:()=>void,
+   
   }
-  
-
+ 
   export interface CommentProps {
     id: number;
     title: string;

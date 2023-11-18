@@ -3,26 +3,33 @@ import styles from "./RegisterPage.module.css"
 import { Link } from "react-router-dom";
 import { FaGoogle, FaGithub } from "react-icons/fa6";
 import { RegisterProps } from "features/features-A/components/Header/Header.interface";
+import { db } from "firebase";
+import {getAuth,createUserWithEmailAndPassword} from "firebase/auth"
 
 
-const RegisterPage: React.FC<RegisterProps> = (props) => {
+const RegisterPage: React.FC<RegisterProps  > = (props) => {
     const [user, setUser] = useState({ name: "", email: "", password: "" })
+    const [error,setError]=useState("Error")
     const { signIn, signInGit } = props
    
     
-    /********************* ************************ 
-    const handleSubmit= async event=>{
-    event.preventDefault()
-        await addDoc(employeelist,user)
-        setUser({
-            name:"",
-            email:"",
-            password:""
+  /*
+    const auth=getAuth();
+    const handleSubmit=event=>{
+        event.preventDefault()
+
+        createUserWithEmailAndPassword(auth,user.login,user.password)
+        .then(r=>{
+            console.log("succes",r.user.uid)
+            setError("")
+        })
+        .catch(err=>{
+            console.log(err.message)
         })
     }
 
-           
-    /********************* ************************  */
+     */      
+  
     return (
         <div className={styles.RegisterPage}>
 
