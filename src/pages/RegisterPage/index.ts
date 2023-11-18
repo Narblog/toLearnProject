@@ -1,2 +1,2 @@
-import RegisterPage from "./RegisterPage";
+import RegisterPage from "./ui/RegisterPage";
 export default RegisterPage

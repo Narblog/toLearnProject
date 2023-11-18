@@ -1,4 +1,4 @@
-import SideBar from "features/features-B/components/SIdeBar";
+import SideBar from "features/features-A/components/Header/features-B/components/SIdeBar";
 import Header from "features/features-A/components/Header";
 import React from "react";
 import styles from "./TablePage.module.css"

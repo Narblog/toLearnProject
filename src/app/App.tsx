@@ -21,11 +21,7 @@ const App:React.FC=()=>{
             title: 'New title 2',
             content: 'News Content 2',
         },
-        {
-            id: 3,
-            title: 'New title 3',
-            content: 'News Content 333',
-        },
+       
     ]
     return(
         <BrowserRouter>

@@ -3,7 +3,7 @@ import styles from "./Header.module.css"
 import { useState } from "react";
 import { BsBellFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { HeaderProps } from "./Header.interface";
+import { HeaderProps } from "../Header.interface";
 
 
 const Header: React.FC<HeaderProps> = ({ user }) => {

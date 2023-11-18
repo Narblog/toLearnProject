@@ -2,7 +2,7 @@
 import styles from './LoginPage.module.css'
 import { Link, useNavigate } from "react-router-dom";
 import { FC } from 'react'
-import { auth } from '../../firebase'
+import { auth } from '../../../firebase'
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { FaGoogle, FaGithub } from "react-icons/fa6";
 

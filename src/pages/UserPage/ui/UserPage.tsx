@@ -1,5 +1,4 @@
 import Header from "features/features-A/components/Header";
-
 import React from "react";
 import styles from "./UserPage.module.css"
 import { AiFillEdit } from "react-icons/ai";
