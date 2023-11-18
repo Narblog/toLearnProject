@@ -15,7 +15,7 @@ const List: React.FC<any> = ({ news }) => {
                             news.map((item: any) => {
                                 return (
                                     <div key={item.id} >
-                                        <a className="list-group-item list-group-item-action"><h1>{item.title}</h1>
+                                        <span className="list-group-item list-group-item-action"><h1>{item.title}</h1>
                                             <p>{item.content} <button className={styles.button} onClick={() => setIsOpen(!isOpen)}>
                                                 <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
                                                     <h2>Comment</h2>
@@ -25,7 +25,7 @@ const List: React.FC<any> = ({ news }) => {
                                                 </Modal><FaPen />
 
 
-                                            </button></p></a>
+                                            </button></p></span>
                                     </div>
                                 )
 
