@@ -1,0 +1,6 @@
+.boards{
+    width:240px;
+    height: calc(92vh);
+    background-color: azure;
+   line-height: 3em;
+}

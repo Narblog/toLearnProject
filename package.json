@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
     "@splinetool/runtime": "^0.9.493",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -16,6 +17,7 @@
     "compose-function": "^3.0.3",
     "firebase": "^10.6.0",
     "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
@@ -52,6 +54,7 @@
   },
   "devDependencies": {
     "@types/compose-function": "^0.0.33",
+    "@types/react-beautiful-dnd": "^13.1.7",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3"
   }

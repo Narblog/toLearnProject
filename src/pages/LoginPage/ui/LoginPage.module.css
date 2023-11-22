@@ -56,32 +56,6 @@
     background-image: linear-gradient(to right, #6bd1b8, #3bccd9, #44c2f2, #80b2f9, #b99ee8, #e191d0, #f989ad, #ff8b86, #ff9e5e, #f4bc36, #c3de29, #5cfc60)
 }
 
-
-.signin {
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: brown;
-    color: #fff;
-    transition: all 0.3s;
-  }
-  
-  .signin:hover{
-    background-color: rgb(230, 72, 72);
-    cursor: pointer;
-  }
-  .signingit{
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: rgb(24, 24, 24);
-    color: #fff;
-    transition: all 0.3s;
-  }
-  .signingit:hover {
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-  }
   .signinbox{
     display: flex;
     flex-direction: column;

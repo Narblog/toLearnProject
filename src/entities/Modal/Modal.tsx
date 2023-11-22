@@ -14,7 +14,7 @@ const Modal: FC<ModalProps> = ({children,isOpen,setIsOpen}) => {
 
     const closeModal = (event: any) => {
        if(modalRef.current && !modalRef.current.contains(event.target)){
-        setIsOpen(false)
+        setIsOpen(true)
        }
     }
     useEffect(() => {

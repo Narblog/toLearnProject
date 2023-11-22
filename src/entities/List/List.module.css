@@ -1,18 +1,47 @@
-
- .button{
-    outline: none;
+.App{
+    display: flex;
+    justify-content:space-between ;
+    padding:20px;
+  margin-left:550px;
+  }
+  
+  html,body{
+    padding:0;
+    margin:0;
+  }
+  .column{
+    background-color: #626263;
+    border-radius: 5px;
+    width:240px;
+    padding:10px;
+    margin:0 10px;
+  
+  }
+  .column h2{
+    text-align: center;
+    color:#ffffff
+  }
+  .card{
+    background-color: white;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+   
+  }
+  .button{
+    outline:none;
+    width:150px;
+  }
+  .button button{
     border:none;
-    background-color: darkseagreen;
-    color:#fff;
-    width:180px;
-    height: 40px;
-    border-radius: 25px;
-}
-
- .button:hover{
-    background-color: rgb(70, 169, 136);
-}
-.list{
-    position: relative;
-    left:40px;
-}
+    padding:2px 4px;
+    background-color: #ffffff;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .button button:hover{
+    background-color: #cecece;
+    border-radius:5px;
+  }
