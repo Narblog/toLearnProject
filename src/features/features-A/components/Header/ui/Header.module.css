@@ -1,140 +1,182 @@
-.header{
-    background-color: black;
-    color:#fff;
-    width:100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap:340px;
+.header {
+  background-color: black;
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 340px;
 }
-.headernavbar{
-    display: flex;
-    align-items: center;
-   padding-left: 30px;
-   gap:25px;
+
+.headernavbar {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  gap: 25px;
 }
-.header button{
-    width:90px;
-    border:none;
-    outline: none;
-    border-radius: 20px;
-    cursor: pointer;
+
+.header button {
+  width: 90px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
-.header .inputsearch{
-    outline: none;
-    border:none;
-    margin-right: 10px;
-    border-radius: 25px;
+
+.header .inputsearch {
+  outline: none;
+  border: none;
+  margin-right: 10px;
+  border-radius: 25px;
 }
-.create{
-    background-color: rgb(24, 228, 225);
+
+.create {
+  background-color: rgb(24, 228, 225);
 }
 
 .userContainer {
-    position: relative;
-    cursor: pointer;
-    float: right;
-   margin-left:15px;
-  
-  }
-  
-  .userImage {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-  }
-  
-  .userMenu {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #e9e9e9;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .userMenu ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .userMenu ul li {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .userMenu a {
-    display: block;
-    padding: 7px 14px;
-    min-width: 150px;
-    color: #000;
-    text-decoration: none;
-  }
-  
-  .userMenu a:hover {
-    background-color: #f1f1f1;
-  }
+  position: relative;
+  cursor: pointer;
+  float: right;
+  margin-left: 15px;
 
-  .bell{
-    font-size:30px;
-    margin-left:25px;
-    cursor: pointer;
-  }
+}
 
-  .headernavbar a {
-    text-decoration: none;
-    color:#fff;
-  }
-  .headernavbar h2{
-    cursor: pointer;
-  }
-  .isBell{
-    position: absolute;
-    top: 55px;
-    right: 20px;
-    background-color: #fff;
-    border: 1px solid #e9e9e9;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    color:#000;
-    width:300px;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  .isBell .bsbell{
-    width:200px;
-    height: 300px;
-  }
-  .isBell p{
-    font-size:25px;
-  }
-  .isCreate{
-    position: absolute;
-    top: 55px;
-   left:430px;
-    background-color: #fff;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    color:#000;
-    width:300px;
-    height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index:3;
-    gap:20px;
-  }
-  .imageBoard{
-    width:220px;
-    height: 120px;
-  }
+.userImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.userMenu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.userMenu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.userMenu ul li {
+  padding: 0;
+  margin: 0;
+}
+
+.userMenu a {
+  display: block;
+  padding: 7px 14px;
+  min-width: 150px;
+  color: #000;
+  text-decoration: none;
+}
+
+.userMenu a:hover {
+  background-color: #f1f1f1;
+}
+
+.bell {
+  font-size: 30px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.headernavbar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.headernavbar h2 {
+  cursor: pointer;
+}
+
+.isBell {
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #000;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.isBell .bsbell {
+  width: 200px;
+  height: 300px;
+}
+
+.isBell p {
+  font-size: 25px;
+}
+
+.isCreate {
+  position: absolute;
+  top: 55px;
+  left: 430px;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #000;
+  width: 300px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 3;
+  gap: 8px;
+}
+
+.imageBoard {
+  width: 220px;
+  height: 120px;
+}
+
+.select {
+  width: 185px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+.isCreate h6 {
+  font-size: 14px;
+  margin-right: 70px;
+
+}
+
+.info {
+  padding: 0 15px;
+  border-top: 1px solid black;
+  margin-top: 8px;
+}
+.isCreate .newBtn{
+  color:rgb(0, 0, 0);
+  width:270px;
+  background-color: #cdcdcd;
+  height: 35px;
+  font-weight: bold;
+  font-size:24px;
+  border-radius:5px;
+
+}
+.isCreate .newBtn:hover{
+  background-color: #a4a4a4;
+  color:#fff;
+}

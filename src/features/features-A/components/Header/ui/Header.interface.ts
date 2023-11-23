@@ -8,7 +8,7 @@ export interface HeaderProps {
   export interface RegisterProps {
     signIn?: () => void,
     signInGit?:()=>void,
-    user?:string,
+    UserName?:string,
     login?:string,
     password?:string,
    

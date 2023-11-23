@@ -8,7 +8,7 @@ const Board:React.FC=()=>{
         <div className={styles.board}>
             <h2>React js</h2>
             <div className={styles.info}>
-            <h3>username</h3>
+            <h4>username</h4>
             <BsStar  className={styles.star}/>
             </div>
         </div>

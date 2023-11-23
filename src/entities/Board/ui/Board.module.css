@@ -1,17 +1,18 @@
 .board{
-    width:240px;
+    width:260px;
     height: 120px;
     background-image: linear-gradient(to left, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color:#fff;
+    border-radius: 3px;
+    padding:5px;
 }
 .info{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 .star{
     font-size:25px;
@@ -21,6 +22,8 @@
     border:none;
     outline: none;
     background:transparent;
-  
 
+}
+.board h2,.board h3{
+    font-size:25px;
 }

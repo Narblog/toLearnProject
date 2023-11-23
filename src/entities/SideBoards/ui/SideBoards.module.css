@@ -1,6 +1,44 @@
 .boards{
-    width:240px;
+    width:290px;
     height: calc(92vh);
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
    line-height: 3em;
+   display: flex;
+   flex-direction: column;
+   padding-left:20px;
+   background-color: rgb(252, 248, 248);
+}
+.boards a{
+   text-decoration: none;
+   font-size:25px;
+   color:#000;
+   max-width: 290px;
+  padding-left:7px;
+   border-radius:15px;
+   margin-top:7px;
+}
+.boards a:hover{
+    border: 0px solid black;
+    background-color: rgb(181, 181, 181);
+}
+.line {
+    border-top: 1px solid #1c1c1c;
+    width:270px;
+   margin-top:7px;
+}
+.WorkSpaces{
+    padding:2px 15px 0 14px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icons:hover{
+    cursor: pointer;
+    background-color: rgb(216, 216, 216);
+}
+.icons{
+    font-size:35px;
+    padding:5px;
+    border-radius: 5px;
 }

@@ -1,0 +1,81 @@
+.MainCard {
+    background: rgb(63, 89, 116);
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px;
+    color:#fff;
+}
+
+
+.title {
+    display: block;
+    height: 80px;
+    padding: 5px;
+}
+
+.title h3 {
+    float: left;
+    padding: 5px;
+}
+
+.title svg {
+    display: inline-block; 
+    height: 24px;
+    width: 24px;
+}
+
+.optbtn{
+    float: right;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.optbtn:hover {
+    cursor: pointer;
+    background:rgb(155, 153, 153);
+}
+
+.actions {
+    display: block;
+    height: 54px;
+    padding-top: 5px;
+}
+
+.addBtn {
+    float: left;
+    height: 34px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.addBtn:hover {
+    cursor: pointer;
+    background:rgb(155, 153, 153);
+}
+
+.addBtn span {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.actions svg {
+    display: inline-block; 
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+.allBtn {
+    float: right;
+    height: 34px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.allBtn:hover {
+    cursor: pointer;
+    background:rgb(155, 153, 153);
+}

@@ -5,32 +5,26 @@ import styles from "./TablePage.module.css"
 import { BsFillBookmarkStarFill,BsFillBookmarkHeartFill,BsFillFilterCircleFill } from "react-icons/bs";
 import { FaBars } from "react-icons/fa6";
 import List from "entities/List";
-import { HeaderProps, } from "features/features-A/components/Header/ui/Header.interface";
+import { DashboardPageProps } from "./TablePage.interface";
 
 
 
-const TablePage:React.FC<HeaderProps | any>=({news})=>{
+
+const TablePage:React.FC<DashboardPageProps>=({items})=>{
     return(
-        <div>
+      <div>
              <Header />
-             <SideBar/>
+           
        <div className={styles.table}>
-        <nav className={styles.tablenavbar}>
-            <h2>My Table Name</h2>
-            <BsFillBookmarkStarFill/>
-            <BsFillBookmarkHeartFill/>
-            <BsFillFilterCircleFill className={styles.filter}/>
-           < FaBars/>
-        </nav>
-       
         <div className={styles.list}>
-        <List />
+        <SideBar/>
+        <List  items={items} />
        
         </div>
-       </div>
+     
       
         </div>
-      
+        </div>
     )
 }
 export default TablePage

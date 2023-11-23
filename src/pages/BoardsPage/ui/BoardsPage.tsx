@@ -9,43 +9,30 @@ import Board from "entities/Board";
 
 
 
-const BoardsPage:React.FC<HeaderProps>=()=>{
-    return(
+const BoardsPage: React.FC<HeaderProps> = () => {
+    return (
         <div>
-             <Header />
-             <div className='container'>
+            <Header />
+            <div className='container'>
                 <div className={styles.boards}>
-                <SideBoards/>   
-                <div>
-                <div>
-                      <h3> <FaStar /> Отмеченные доски</h3>
-                        <div className={styles.box}>
-                        <Board/>  <Board/> 
+                    <SideBoards />
+                    <div className={styles.table}>
+                        <div>
+                            <h3> <FaStar />Marked boards</h3>
+                            <div className={styles.box}>
+                                <Board />  <Board />
+                            </div>
                         </div>
-
-                </div>
-                <div className={styles.inline}>
-                <h2>Your Table</h2>
-                <div className={styles.box}>
-                        <Board/>  <Board/>  <Board/>  
+                        <div className={styles.inline}>
+                            <h3>YOUR WORKSPACES</h3>
+                            <div className={styles.box}>
+                                <Board />  <Board />  <Board />
+                            </div>
                         </div>
+                    </div>
                 </div>
-               
-                       
-                        </div>
-                   
-                     
-                </div>
-
-                
-  
             </div>
-
-    
-       
         </div>
-       
-      
     )
 }
 export default BoardsPage

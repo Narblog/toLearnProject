@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/*import { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import styles from "./List.module.css"
 import { FaMessage,FaPen,FaRegStar  } from "react-icons/fa6";
@@ -139,5 +139,27 @@ function List() {
     </DragDropContext>
   );
 }
+
+export default List; */
+
+import React from "react";
+import MainCard from "entities/MainCard/ui/MainCard";
+import "./List.css"
+import { DashboardPageProps } from "pages/TablePage/ui/TablePage.interface";
+
+const List: React.FC<DashboardPageProps> = ({ items }) => {
+
+  return (
+    <div className="dashboard">
+      <div className="board">
+        {items.map((el) => {
+        return (
+          <MainCard key={el.id} {...el}/>
+        )
+        })}
+      </div>
+    </div>
+  );
+};
 
 export default List;

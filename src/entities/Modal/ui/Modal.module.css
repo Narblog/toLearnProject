@@ -1,16 +1,14 @@
 .modal {
     padding: 20px;
-    background-color: #fff;
+    background-color: #e4e4e4;
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 300px;
     min-height: 200px;
     color: #000;
     position: absolute;
-    left: 150%;
-    top: 50%;
-
-
+    top:40px;
+left:740px;
 }
 
 .modal h1 {
@@ -18,3 +16,13 @@
     border-bottom: 1px solid #000;
     padding-bottom: 10px;
 }
+.modalbg {
+    background-color: #707070;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+  opacity: 0.9;
+    cursor: pointer;
+  }

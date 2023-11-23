@@ -1,6 +1,6 @@
 .table{
     width:100%;
-    height: 92vh;
+    height: 92.8vh;
     background-color: rgb(212, 195, 189);
     
 }
@@ -24,12 +24,6 @@
     margin-left:700px;
 }
 .list{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding-top:70px;
-   position: relative;
-   left:290px;
-  
-   
+    display: flex;
+
 }

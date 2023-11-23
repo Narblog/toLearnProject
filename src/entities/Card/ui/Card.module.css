@@ -1,0 +1,41 @@
+.card {
+background:rgb(255, 255, 255) !important;
+    padding: 10px !important;
+    border-radius: 6px;
+    margin: 5px 0;
+    color:#000;
+}
+
+.card:hover {
+    cursor: pointer;
+    outline: 2px solid #000000;
+}
+
+.cardActions {
+    display: block;
+    height:35px;
+    padding-top: 5px;
+}
+
+.btn {
+    float: left;
+    height: 34px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #e6e6e6;
+}
+
+.btn span {
+    display: inline-block; 
+    padding-left: 5px;
+}
+
+.btn svg {
+    display: inline-block; 
+    height: 16px;
+    width: 16px;
+}

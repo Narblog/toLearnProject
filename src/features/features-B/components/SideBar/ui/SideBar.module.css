@@ -1,28 +1,52 @@
 .sidebar{
-    width:325px;
-    z-index: 2;
-    background-color: rgb(66, 66, 66);
-    float: left;
-    position: fixed;
-    height: 100%;
-     overflow: auto;
-     color:#fff;
-    
-}
-.sidebarmenu{
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    padding-left:10px;
-    font-size:28px;
-    
-}
-.sidebarmenu a{
+    width: 300px;
+    height: calc(100vh - 60px);
+    display: inline-block;
+    background: rgb(121, 113, 113);
     color:#fff;
+}
+
+.sidebar .profile {
+    padding: 20px;
+}
+
+.line {
+    border-top: 1px solid #fff;
+}
+
+.sidebar .menu {
+    padding: 10px 0;
+}
+
+.sidebar .menu a {
     text-decoration: none;
+    list-style: none;
+    color: #fff;
 }
-.sidebar p{
-    font-size:32px;
-    color:#fff;
-    padding-left:10px;
+
+.sidebar .menu ul li {
+    padding: 5px 20px;
+}
+
+.sidebar .menu ul li:hover {
+    background:rgb(147, 147, 147);
+    cursor: pointer;
+    border-radius:5px  0 0 5px;
+}
+
+
+
+.sidebar .menu h3 {
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+.icon{
+  font-size:40px;
+}
+.iconbox{
+    display: flex;
+    gap:20px;
+}
+.tableIcon{
+    color:#c9c9c9
 }
