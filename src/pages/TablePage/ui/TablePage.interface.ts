@@ -1,7 +1,7 @@
 export interface TasksProps {
     id: number;
     title: string;
-    description: string;
+    info: string;
     author: string;
     date: Date;
     comments?: any;
@@ -15,6 +15,6 @@ export interface ItemsProps {
     tasks?: TasksProps[];
 }
 
-export interface DashboardPageProps {
+export interface TableProps {
     items: ItemsProps[];
 }

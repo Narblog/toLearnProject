@@ -5,11 +5,11 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import styles from "./Card.module.css"
 import Modal from "entities/Modal";
 import Info from "entities/Info";
-import { CardWidgetProps } from "./Card.interface";
+import { CardProps } from "./Card.interface";
 import Comments from "entities/Comments/ui/Comments";
 
-const Card: React.FC<CardWidgetProps> = ({ card }) => {
-  const [isOpenDescription, setIsOpenDescription] = useState<boolean>(false);
+const Card: React.FC<CardProps> = ({ card }) => {
+  const [isOpenInfo, setIsOpenInfo] = useState<boolean>(false);
   const [isOpenComments, setIsOpenComments] = useState<boolean>(false);
 
   return (
@@ -20,14 +20,14 @@ const Card: React.FC<CardWidgetProps> = ({ card }) => {
       <div className={styles.cardActions}>
         <div
           className={styles.btn}
-          title="Description"
-          onClick={() => setIsOpenDescription(true)}
+          title="Information"
+          onClick={() => setIsOpenInfo(true)}
         >
           <MdOutlineSubject />
         </div>
         <div
            className={styles.btn}
-          title="Comments and replys"
+          title="Comments "
           onClick={() => setIsOpenComments(true)}
         >
           <LiaCommentDots />
@@ -39,10 +39,14 @@ const Card: React.FC<CardWidgetProps> = ({ card }) => {
           <FaRegPenToSquare />
         </div>
       </div>
-      {isOpenDescription ? (
-        <Modal close={setIsOpenDescription}>
-          <Info {...card} />
-        </Modal>
+      {isOpenInfo ? (
+       
+           <Modal close={setIsOpenInfo} >
+            <Info  {...card} />
+        
+        </Modal> 
+
+       
       ) : null}
       {isOpenComments ? (
         <Modal close={setIsOpenComments}>

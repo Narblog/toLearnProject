@@ -1,0 +1,47 @@
+.comment {
+    padding: 10px;
+    margin: 10px 0;
+    background-color:rgb(156, 140, 140);
+    border-radius: 5px;
+}
+
+.photo {
+    float: left;
+    width: 40px;
+}
+
+.photo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.data {
+    width: 100%;
+}
+
+.data a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.data a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+.data span {
+    padding: 7px;
+    display: inline-block;
+}
+
+.content {
+    display: flow-root;
+}
+
+.content .replies .comment {
+ background-color: rgb(95, 87, 87);
+    border-radius: 5px;
+}

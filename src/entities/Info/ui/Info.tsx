@@ -1,20 +1,21 @@
 import { TasksProps } from "pages/TablePage/ui/TablePage.interface";
-import "./info.css";
-
+import styles from "./Info.module.css"
+import { FaCircleInfo } from "react-icons/fa6";
 const Info: React.FC<TasksProps> = ({
   id,
   author,
   date,
-  description,
+  info,
   title,
 }) => {
   return (
     <>
       <h1>{title}</h1>
-      <div className="modal-content">
-        <p>{description}</p>
-        <div className="line"></div>
-        <div className="line"></div>
+      <div className={styles.modal}>
+      <FaCircleInfo />
+        <p>{info}</p>
+        <div className={styles.line}></div>
+      
         <span>{author}</span>
       </div>
     </>

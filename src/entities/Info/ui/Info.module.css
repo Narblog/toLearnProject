@@ -1,0 +1,12 @@
+.modal {
+    padding:10px 5px;
+}
+
+.modal p {
+    padding-bottom: 3px;
+}
+
+.modal span {
+    display: block;
+    padding: 0px 2px;
+}

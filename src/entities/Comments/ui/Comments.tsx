@@ -6,14 +6,13 @@ const Comments: React.FC<TasksProps> = ({
     title,
     comments,
 }) => {
-    console.log(comments);
     return (
         <>
             <h1>{title}</h1>
             <div className="modal-content">
                 <div className="line"></div>
                 <div className="line"></div>
-                <div className="comments-wrapper">
+                <div className="comments">
                     {comments.map((el: any) => {
                         return <Comment key={el.id} {...el} />;
                     })}

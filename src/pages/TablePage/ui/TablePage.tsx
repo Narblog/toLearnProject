@@ -5,12 +5,12 @@ import styles from "./TablePage.module.css"
 import { BsFillBookmarkStarFill,BsFillBookmarkHeartFill,BsFillFilterCircleFill } from "react-icons/bs";
 import { FaBars } from "react-icons/fa6";
 import List from "entities/List";
-import { DashboardPageProps } from "./TablePage.interface";
+import { TableProps } from "./TablePage.interface";
 
 
 
 
-const TablePage:React.FC<DashboardPageProps>=({items})=>{
+const TablePage:React.FC<TableProps>=({items})=>{
     return(
       <div>
              <Header />
