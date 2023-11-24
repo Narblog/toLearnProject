@@ -16,26 +16,26 @@ const App:React.FC=()=>{
           id: 1,
           mainTitle: "Title 1",
           author: "John",
-          date: new Date("2023-11-4"),
+          date: new Date("12-11-2023"),
           tasks: [
             {
               id: 1,
               title: "Task title 1",
-              info: "Some long description text 1",
+              info: "Lorem ipsum Lorem ipsum lorem",
               author: "Jack",
-              date: new Date("2023-11-4"),
+              date: new Date("12-11-2023"),
               comments: [
                 {
                   id: 1,
                   author: "John",
                   content: "text",
-                  date: new Date("2023-11-4"),
+                  date: new Date("12-11-2023"),
                   reply: [
                     {
                       id: 1,
                       author: "Jin",
                       message: "Comment",
-                      date: new Date("2023-11-4"),
+                      date: new Date("12-11-2023"),
                     },
                   ],
                 },
@@ -43,13 +43,13 @@ const App:React.FC=()=>{
                   id: 2,
                   author: "Artur",
                   message: "Comment",
-                  date: new Date("2023-11-4"),
+                  date: new Date("12-11-2023"),
                   reply: [
                     {
                       id: 1,
                       author: "Artur",
                       message: "Comment",
-                      date: new Date("2023-11-4"),
+                      date: new Date("12-11-2023"),
                     },
                  
                   ],
@@ -58,13 +58,13 @@ const App:React.FC=()=>{
                   id: 2,
                   author: "Artur",
                   message: "Comment",
-                  date: new Date("2023-11-4"),
+                  date: new Date("12-11-2023"),
                   reply: [
                     {
                       id: 1,
                       author: "Artur",
                       message: "Comment",
-                      date: new Date("2023-11-4"),
+                      date: new Date("12-11-2023"),
                     },
                    
                   ],
@@ -74,21 +74,21 @@ const App:React.FC=()=>{
             {
               id: 2,
               title: "Task title 2",
-              info: "Some long description text 2",
               author: "Aram",
-              date: new Date("2023-11-4"),
+              info: "Lorem ipsum Lorem ipsum lorem",
+              date: new Date("12-11-2023"),
               comments: [
                 {
                   id: 1,
                   author: "Jack",
                   message: "Comment",
-                  date: new Date("2023-11-4"),
+                  date: new Date("12-11-2023"),
                   reply: [
                     {
                       id: 1,
                       author: "Aram",
                       message: "Comment",
-                      date: new Date("2023-11-4"),
+                      date: new Date("12-11-2023"),
                     },
                   
                   ],
@@ -101,26 +101,26 @@ const App:React.FC=()=>{
           id: 2,
           mainTitle: "Title 2",
           author: "Hrach",
-          date: new Date("2022-09-16"),
+          date: new Date("12-11-2023"),
           tasks: [
             {
               id: 1,
-              title: "Task title 1",
-              info: "Some long description text",
+              title: "Task title 3",
+              info: "Lorem ipsum Lorem ipsum lorem",
               author: "Aram",
-              date: new Date("2023-11-4"),
+              date: new Date("12-11-2023"),
               comments: [
                 {
                   id: 1,
                   author: "JOhn",
                   message: "Comment",
-                  date: new Date("2023-11-4"),
+                  date: new Date("12-11-2023"),
                   reply: [
                     {
                       id: 1,
                       author: "Jack",
                       message: "Comment",
-                      date: new Date("2023-11-4"),
+                      date: new Date("12-11-2023"),
                     },
                    
                   ],
@@ -129,8 +129,8 @@ const App:React.FC=()=>{
             },
             {
               id: 2,
-              title: "Task title 2",
-              info: "Some long description text",
+              title: "Task title 4 ",
+              info: "Lorem ipsum Lorem ipsum lorem",
               author: "Saqo",
               date: new Date("2023-11-4"),
               comments: [
@@ -161,8 +161,8 @@ const App:React.FC=()=>{
           tasks: [
             {
               id: 1,
-              title: "Task title 1",
-              info: "Some long description text 3",
+              title: "Task title 5",
+              info: "Lorem ipsum Lorem ipsum lorem",
               author: "Artur",
               date: new Date("2023-11-4"),
               comments: [
@@ -175,7 +175,7 @@ const App:React.FC=()=>{
                   
                     {
                       id: 2,
-                      author: "Pogos",
+                      author: "Hrach",
                       message: "Comment",
                       date: new Date("2023-11-4"),
                     },
@@ -185,7 +185,7 @@ const App:React.FC=()=>{
             },
             {
               id: 2,
-              title: "Task name 2",
+              title: "Task name 6",
               info: "Info",
               author: "Artur",
               date: new Date("12-11-2023"),

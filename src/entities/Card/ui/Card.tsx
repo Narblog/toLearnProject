@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdOutlineSubject } from "react-icons/md";
-import { LiaCommentDots, LiaComments } from "react-icons/lia";
+import { LiaCommentDots, } from "react-icons/lia";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import styles from "./Card.module.css"
 import Modal from "entities/Modal";
