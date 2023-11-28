@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./RegisterPage.module.css"
 import { Link, useNavigate } from "react-router-dom";
-import { RegisterProps } from "features/features-A/components/Header/ui/Header.interface";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth"
 import SignInWithGithub from 'features/SignInWithGitHub';
 import SignInWithGoogle from "features/SignInWithGoogle"
@@ -30,7 +29,7 @@ const RegisterPage: React.FC = () => {
  
      const handleSubmit=(e: React.SyntheticEvent) =>{
          e.preventDefault()   
-         createUserWithEmailAndPassword(auth,user.login,user.password)
+         createUserWithEmailAndPassword(auth,user.email,user.password)
          .then(data=>{
              console.log("succes",data.user.uid)
              navigate("/")

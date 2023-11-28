@@ -1,13 +1,14 @@
 import Header from "features/features-A/components/Header";
 import React from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "entities/firebase/store";
+import { FaUserGraduate } from "react-icons/fa6";
 import styles from "./UserPage.module.css"
 
-import { UserPageProps } from "./UserPage.interface";
+
 
 const UserPage: React.FC = () => {
-    const user = useSelector((state: RootState) => state.user.profile);
+    const user = useSelector((state: any) => state.user.profile);
+   
     return (
         <div>
             <Header />
@@ -17,7 +18,7 @@ const UserPage: React.FC = () => {
                         {user?.photoURL ? (
                             <img src={user.photoURL} alt="" className={styles.photo} />
                         ) : (
-                            <div>No image</div>
+                            <div>< FaUserGraduate  className={styles.icons}/></div>
                         )}
                     </div>
                    <h1>Student</h1>
@@ -29,7 +30,11 @@ const UserPage: React.FC = () => {
                     <div className={styles.infobox}>
                         <div>
                             <p>Name</p>
-                            <span>{user?.displayName}</span>
+                            <span>  {user?.displayName ? (
+                            <div>{user.displayName}</div>
+                        ) : (
+                            <h2>Guest</h2>
+                        )}</span>
                         </div>
 
                         <div>

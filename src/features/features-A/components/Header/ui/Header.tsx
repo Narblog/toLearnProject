@@ -1,4 +1,4 @@
-import React ,{useEffect}from "react";
+import React, { useEffect } from "react";
 import styles from "./Header.module.css"
 import { useState } from "react";
 import { BsBellFill, BsBellSlash } from "react-icons/bs";
@@ -12,12 +12,13 @@ import { setUser } from "entities/firebase/user/userSlice";
 import { auth } from "../../../../../firebase";
 import { useSelector } from "react-redux";
 import { RootState } from "entities/firebase/store";
+import { FaUserGraduate } from "react-icons/fa6";
 const Header: React.FC<HeaderProps | UserPageProps> = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-     dispatch( setUser(currentUser));
+      dispatch(setUser(currentUser));
     });
 
     return unsubscribe;
@@ -26,8 +27,8 @@ const Header: React.FC<HeaderProps | UserPageProps> = () => {
   const handleSignOut = () => {
     signOut(auth).catch((error) => console.log(error));
   };
-  
- 
+
+
 
 
   const user = useSelector((state: RootState) => state.user.profile);
@@ -64,15 +65,15 @@ const Header: React.FC<HeaderProps | UserPageProps> = () => {
               <img className={styles.imageBoard} src="https://images.ctfassets.net/rz1oowkt5gyp/4kCNudjaBYj90CGgG7Lict/cbafa67336b2007278f50d99ceabfb22/Boards_2x.png" alt="images" />
               <div> Board title: <input type="text" required /></div>
               <h6 ><FaClipboardQuestion />Enter the name of the board</h6>
-              <div> Visibility:  <select id="cars"className={styles.select} name="cars">
-                  <option value="volvo">Yes</option>
-                  <option value="saab">No</option>
-                </select></div>
-  
-        <p className={styles.info}>You can add a few more boards to the workspace - 6 boards.
-           In the free version, workspaces can have up to 10 open boards.
-            To add more, please subscribe.</p>
-             
+              <div> Visibility:  <select id="cars" className={styles.select} name="cars">
+                <option value="volvo">Yes</option>
+                <option value="saab">No</option>
+              </select></div>
+
+              <p className={styles.info}>You can add a few more boards to the workspace - 6 boards.
+                In the free version, workspaces can have up to 10 open boards.
+                To add more, please subscribe.</p>
+
               <button className={styles.newBtn}>Create </button>
             </div>
           ) : null
@@ -93,15 +94,15 @@ const Header: React.FC<HeaderProps | UserPageProps> = () => {
         }
         <div className={styles.userContainer}>
           <div className={styles.person} onClick={toggleUserMenu}>
-          {
-            user?.photoURL ?
-              <img
-              
-            src={user?.photoURL}
-            alt="UserAvatar"
-            className={styles.userImage}
-          />: <div>No photo</div>
-          }
+            {
+              user?.photoURL ?
+                <img
+
+                  src={user?.photoURL}
+                  alt="UserAvatar"
+                  className={styles.userImage}
+                /> : <div><FaUserGraduate className={styles.gradient} /></div>
+            }
           </div>
           {
             isUserMenuOpen ? (

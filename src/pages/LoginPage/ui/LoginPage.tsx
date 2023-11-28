@@ -27,6 +27,7 @@ const LoginPage: FC = () => {
             setError(error)
         })
       };
+
     return (
         <div className={styles.login}>
             <div className={styles.loginpage}>
