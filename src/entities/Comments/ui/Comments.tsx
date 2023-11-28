@@ -1,24 +1,22 @@
-import { TasksProps } from "pages/TablePage/ui/TablePage.interface";
-import Comment from "entities/Comment";
-
-const Comments: React.FC<TasksProps> = ({
-    id,
-    title,
-    comments,
-}) => {
+import React from "react";
+import styles from "./Comments.module.css";
+import { CommentsProps } from "../comments.interface";
+import Comment from "entities/Comment/ui/Comment";
+const Comments: React.FC<CommentsProps> = ({ comments }) => {
     return (
-        <>
-            <h1>{title}</h1>
-            <div className="modal-content">
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="comments">
-                    {comments.map((el: any) => {
-                        return <Comment key={el.id} {...el} />;
-                    })}
-                </div>
-            </div>
-        </>
+
+        <div className={styles.commentsTab}>
+            <h1>Information  </h1>
+            <ul className={styles.commentsList}>
+                {comments.map((comment) => (
+                    <li className={styles.comment} key={comment.id}>
+                        <Comment comment={comment} key={comment.id} />
+                    </li>
+                ))}
+
+                {!comments.length ? <h2>Info...</h2> : null}
+            </ul>
+        </div>
     );
 };
 

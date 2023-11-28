@@ -3,11 +3,11 @@
   background-color: #e4e4e4;
   border-radius: 5px;
   border: 1px solid #ccc;
-  width: 300px;
-  min-height: 200px;
+  width: 200px;
+  min-height: 100px;
   color: #000;
   position: absolute;
-  top: 10px;
+  top: 50px;
   left: 420px;
   z-index: 3;
 }
@@ -19,13 +19,13 @@
 }
 
 .modalbg {
-  background-color: #555555;
+  background-color: #353535;
   position: absolute;
   left: -250px;
   top: 0;
   width: 1850px;
   height: 1500px;
-  opacity: 0.9;
+  opacity: 3;
   cursor: pointer;
   z-index: 2;
 }

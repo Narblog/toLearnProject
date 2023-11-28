@@ -1,59 +1,48 @@
 import React, { useState } from "react";
-import { MdOutlineSubject } from "react-icons/md";
-import { LiaCommentDots, } from "react-icons/lia";
-import { FaRegPenToSquare } from "react-icons/fa6";
 import styles from "./Card.module.css"
-import Modal from "entities/Modal";
-import Info from "entities/Info";
 import { CardProps } from "./Card.interface";
-import Comments from "entities/Comments/ui/Comments";
+import { FaPen, FaAlignLeft, FaComment } from "react-icons/fa6";
+import { useDispatch, useSelector } from "react-redux";
+import { clickChange,commentChange } from "entities/firebase/comments/commentsSlice";
+import { RootState } from "entities/firebase/store";
+import { changeTaskItemName } from "entities/firebase/tasks/taskSlice";
 
-const Card: React.FC<CardProps> = ({ card }) => {
-  const [isOpenInfo, setIsOpenInfo] = useState<boolean>(false);
-  const [isOpenComments, setIsOpenComments] = useState<boolean>(false);
 
-  return (
-    <div className={styles.card}>
-     <div className={styles.content}>
-        <p>{card.title}</p>
-      </div>
-      <div className={styles.cardActions}>
-        <div
-          className={styles.btn}
-          title="Information"
-          onClick={() => setIsOpenInfo(true)}
-        >
-          <MdOutlineSubject />
-        </div>
-        <div
-           className={styles.btn}
-          title="Comments "
-          onClick={() => setIsOpenComments(true)}
-        >
-          <LiaCommentDots />
-          <span>{card.comments.length}</span>
-          <span> </span>
-         
-        </div>
-        <div    className={styles.btn} title="Edit">
-          <FaRegPenToSquare />
-        </div>
-      </div>
-      {isOpenInfo ? (
-       
-           <Modal close={setIsOpenInfo} >
-            <Info  {...card} />
-        
-        </Modal> 
+const Card: React.FC<CardProps> = ({ item, parentId }) => {
+ 
+  const [isEditting, setEditting] = useState(false)
+  const [itemName, setItemName] =useState(item.name)
 
-       
-      ) : null}
-      {isOpenComments ? (
-        <Modal close={setIsOpenComments}>
-          <Comments {...card}/>
-        </Modal>
-      ) : null}
-    </div>
+  
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(clickChange(true));
+    dispatch(commentChange(item.comments));
+  };
+
+  const handleTaskItemChange = () => {
+    setEditting(!isEditting)
+  };
+
+  const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    setItemName(e.target.value)
+    dispatch(changeTaskItemName({ parentId, selfId: item.id, name: e.target.value }));
+
+  }
+
+  return(
+   
+    <div className={styles.box} >
+        <div className={styles.taskName}>
+          {!isEditting ? <p onClick={handleClick}>{item.name}</p>: <input type="text" value={itemName} onChange={handleInputChange}/>}
+          <button className={styles.icon}  onClick={handleTaskItemChange}>
+            <FaPen />
+          </button>
+        </div>
+
+      
+        </div>
   );
 };
 

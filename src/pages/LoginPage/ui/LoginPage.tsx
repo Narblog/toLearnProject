@@ -23,7 +23,7 @@ const LoginPage: FC = () => {
             navigate('/user');
           })
         .catch((error)=>{
-            console.log(error)
+           alert(error.message)
             setError(error)
         })
       };
@@ -31,7 +31,10 @@ const LoginPage: FC = () => {
         <div className={styles.login}>
             <div className={styles.loginpage}>
             <form onSubmit={SignIn}>
-                <h2>Sign Up</h2>
+              <h2>
+              <Link  className={styles.signinh2} to="/">Sign Up</Link>
+              </h2>
+                
               
                 <div className={styles.forma}>
                     <input className={styles.input} type="email" value={email} onChange={(e)=>setEmail(e.target.value)}id="username" placeholder="Username or Email" />
@@ -45,6 +48,7 @@ const LoginPage: FC = () => {
                     <SignInWithGoogle/>
                        <SignInWithGithub/>
                     </div>
+                    <span className={styles.haveAnAcc}>Dont have an account? <Link to='/register'><span>Sign up</span></Link></span>
                 </div>
                 </form>
             </div>

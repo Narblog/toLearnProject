@@ -1,4 +1,6 @@
 import React from "react";
+import { RootState } from "entities/firebase/store";
+import { useSelector } from "react-redux";
 import {
   CiViewTable,
   CiCalendarDate,
@@ -8,17 +10,27 @@ import {
 } from "react-icons/ci";
 import { FaRegUser, FaRegClipboard } from "react-icons/fa";
 
-import styles from "./Sidebar.module.css"
+import styles from "./SideBar.module.css"
 import { Link } from "react-router-dom";
 
 const SideBar: React.FC = () => {
+  const user = useSelector((state: RootState) => state.user.profile);
   return (
     <div className={styles.sidebar}>
       <div className={styles.profile}>
         <div className={styles.iconbox}>
 
-          <FaRegUser className={styles.icon} />
-          <h3>Name Surname</h3>
+        
+          <div> {
+            user?.photoURL ?
+              <img
+              
+            src={user?.photoURL}
+            alt="UserAvatar"
+            className={styles.userimg}
+          />:   <FaRegUser className={styles.icon} />
+          }</div>
+          <h3>{user?.displayName}</h3>
         </div>
       </div>
       <div className={styles.line}></div>

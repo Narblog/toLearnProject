@@ -1,13 +1,41 @@
-import React from "react";
+import React ,{useEffect}from "react";
 import styles from "./Header.module.css"
 import { useState } from "react";
 import { BsBellFill, BsBellSlash } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { HeaderProps } from "./Header.interface";
-import { FcBusinessman } from "react-icons/fc";
 import { UserPageProps } from "pages/UserPage/ui/UserPage.interface";
 import { FaClipboardQuestion } from "react-icons/fa6";
-const Header: React.FC<HeaderProps | UserPageProps> = ({ user }) => {
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { setUser } from "entities/firebase/user/userSlice";
+import { auth } from "../../../../../firebase";
+import { useSelector } from "react-redux";
+import { RootState } from "entities/firebase/store";
+const Header: React.FC<HeaderProps | UserPageProps> = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+     dispatch( setUser(currentUser));
+    });
+
+    return unsubscribe;
+  }, []);
+
+  const handleSignOut = () => {
+    signOut(auth).catch((error) => console.log(error));
+  };
+  
+ 
+
+
+  const user = useSelector((state: RootState) => state.user.profile);
+
+
+
+
+
   const [isUserMenuOpen, setUserMenuOpen] = useState<boolean>(false)
   const [isBell, setIsBell] = useState<boolean>(false)
   const [isCreate, setIsCreate] = useState<boolean>(false)
@@ -65,9 +93,15 @@ const Header: React.FC<HeaderProps | UserPageProps> = ({ user }) => {
         }
         <div className={styles.userContainer}>
           <div className={styles.person} onClick={toggleUserMenu}>
-            {
-              user?.photoURL ? <img src={user.photoURL} alt="" /> : <FcBusinessman className={styles.man} />
-            }
+          {
+            user?.photoURL ?
+              <img
+              
+            src={user?.photoURL}
+            alt="UserAvatar"
+            className={styles.userImage}
+          />: <div>No photo</div>
+          }
           </div>
           {
             isUserMenuOpen ? (
@@ -80,7 +114,7 @@ const Header: React.FC<HeaderProps | UserPageProps> = ({ user }) => {
                     <Link to="">Settings</Link>
                   </li>
                   <li>
-                    <Link to="/Login">Sign Out</Link>
+                    <Link to="/Login" onClick={handleSignOut}>Sign Out</Link>
                   </li>
                 </ul>
               </div>

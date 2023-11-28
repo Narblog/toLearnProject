@@ -1,38 +1,60 @@
-import { FC, ReactNode, useEffect, useRef } from "react";
-import styles from "./Modal.module.css"
+import { FC, ReactNode, useEffect, useRef,  } from 'react'
+import { clickChange } from 'entities/firebase/comments/commentsSlice';
+import styles from './Modal.module.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from 'entities/firebase/store';
 
 interface ModalProps {
-  close: (arg: boolean) => void;
-  children: ReactNode;
+  children: ReactNode
 }
 
-const Modal: FC<ModalProps> = ({ close, children }) => {
-  const modalRef = useRef<any>(null);
+const Modal: FC<ModalProps> = ({ children }) => {
+
+  const isClicked = useSelector((state: RootState)=>{
+    return state.comments.isClicked
+  })
+  console.log(isClicked);
+  
+
+  const dispatch = useDispatch();
+
+
+  const modalRef = useRef<HTMLDivElement>(null)
 
   const closeModal = (event: MouseEvent) => {
-    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-      close(false);
+    if (modalRef.current && !modalRef.current.contains(event.target as Node) ) {
+      dispatch(clickChange(false))
     }
-  };
+  }
+
 
   useEffect(() => {
-    setTimeout(() => {
-      document.addEventListener("click", closeModal);
+    if(isClicked){
+      document.addEventListener('mousedown', closeModal);
 
-      return () => {
-        document.removeEventListener("click", closeModal);
-      };
-    }, 1);
-  }, []);
+    }else{
+      document.removeEventListener('mousedown', closeModal);
+    
+    }
+    
+
+    return () => {
+      document.removeEventListener('mousedown', closeModal);
+
+    }
+  }, [isClicked])
+
+  
 
   return (
     <>
-      <div className={styles.modalbg}></div>
-      <div ref={modalRef} className={styles.modal}>
-        {children}
-      </div>
+      {
+        isClicked && <div>
+            <div ref={modalRef} className={styles.modal}>{children}</div>
+          </div>
+      }
     </>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

@@ -50,7 +50,7 @@
     width: calc(100vw - 300px);
     position: fixed;
     display: inline-block;
-margin-left:250px;
+margin-left:-0px;
   }
   
   .Tableboard h1 {
@@ -58,8 +58,6 @@ margin-left:250px;
   }
   
   .board {
- 
-
     display: flex;
     margin-left:40px;
   }

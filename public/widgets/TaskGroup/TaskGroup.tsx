@@ -1,13 +1,15 @@
-import React from "react";
-import styles from "./List.module.css"
-import {  TaskItemProps } from "pages/TablePage/ui/TablePage.interface";
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import { changeDragDropItems } from "entities/firebase/tasks/taskSlice";
-import { RootState } from "entities/firebase/store";
-import { useDispatch,useSelector } from "react-redux";
-import { TaskProps } from "pages/TablePage/ui/TablePage.interface";
-import MainCard from "entities/MainCard";
-const List: React.FC = ({}) => {
+import React, { useEffect, useState } from 'react'
+import styles from './TaskGroup.module.css'
+import { TaskItemProps, TaskProps, } from 'pages/TasksPage/TaksPage.interface'
+import Task from "features/Task";
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+import { useSelector } from 'react-redux';
+import { RootState } from 'entites/store';
+import { changeDragDropItems } from 'entites/tasks/taskSlice';
+import { useDispatch } from 'react-redux';
+
+
+const TaskGroup: React.FC = ({}) => {
   const dispatch = useDispatch();
 
   const tasks = useSelector((state: RootState) => {
@@ -75,9 +77,8 @@ const List: React.FC = ({}) => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-    <div className={styles.Tableboard}>
-      <div className={styles.board}>
-      {
+       <div className={styles.taskGroup}>
+        {
         tasks.map((task, index) => {
           return (
             <Droppable droppableId={task.id.toString()} key={task.id}>
@@ -88,7 +89,7 @@ const List: React.FC = ({}) => {
                     {...provided.droppableProps}
                       ref={provided.innerRef}
                     >
-                      <MainCard task={task} key={task.id}/>
+                      <Task task={task} key={task.id}/>
                     </div>
                   )
                 }
@@ -99,12 +100,10 @@ const List: React.FC = ({}) => {
           
         )
       }
-       
-       
-      </div>
     </div>
     </DragDropContext>
-  );
-};
+   
+  )
+}
 
-export default List;
+export default TaskGroup;

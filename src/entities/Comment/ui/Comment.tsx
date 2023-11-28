@@ -1,35 +1,23 @@
-import { Link } from "react-router-dom";
-import { CommentProps } from "./Comment.interface";
-import styles from "./Comment.module.css"
-const Comment: React.FC<CommentProps> = ({
-  id,
-  author,
-  date,
-  message,
-  reply,
-}) => {
+import React from "react";
+import styles from "./Comment.module.css";
+import { CommentIProps } from "./Comment.interface";
+import Replies from "entities/Replies";
+
+const Comment: React.FC<CommentIProps> = ({ comment }) => {
   return (
-    <div className={styles.comment}>
-      <div className={styles.photo}>
-        <img
-          src="https://fs01.cap.ru//www21-11/galatr/person/cb45deff-7216-4306-80f7-9e48d03f437e/no_avatar_3st4mbc2.png"
-          alt="User"
-        ></img>
-      </div>
-      <div className={styles.data}>
-        <Link to="#">{author}</Link>
-        <span>{(new Date().toDateString())}</span>
-      </div>
-      <div className={styles.content}>
-        <p>{message}</p>
-        <div className={styles.replies}>
-          {reply
-            ? reply.map((el) => {
-                return <Comment key={el.id} {...el} />;
-              })
-            : null}
+    <div className={styles.commentContainer}>
+        <div className={styles.userInfo}>
+          <img src={comment.author.image} alt="UserPhoto" />
+          <div>
+            <p>{comment.author.name}</p>
+            <span>{comment.date}</span>
+            <div className={styles.commentText}>{comment.text}</div>
+          </div>
         </div>
-      </div>
+     
+
+      <Replies replies={comment.replies} />
+      <div className={styles.addReply}>Add a Reply...</div>
     </div>
   );
 };
