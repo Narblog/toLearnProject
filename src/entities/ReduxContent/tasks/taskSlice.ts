@@ -39,7 +39,7 @@ const initialState: initialStateTasks = {
                     name: "John"
                    
                   },
-                  text: "No, because youre thinking very simply and awkwardm, you dont think that this is too mucj",
+                  text: "Lorem ipsum text",
                   date: new Date().toDateString(),
                 },
                 
@@ -128,7 +128,7 @@ const initialState: initialStateTasks = {
         },
         {
           id: 28,
-          name: "using",
+          name: "Jack",
           comments: [],
         },
       ],
