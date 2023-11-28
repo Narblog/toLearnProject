@@ -65,7 +65,7 @@ const TablePage:React.FC=()=>{
                 placeholder="Add list name"
                 value={newTaskName}
               />{" "}
-              <button onClick={onAddNewClick}>
+              <button  onClick={onAddNewClick}>
                 {newTaskName !== "" ? "Add new List" : "Close"}
               </button>
             </div>

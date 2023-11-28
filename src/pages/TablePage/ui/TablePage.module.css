@@ -35,13 +35,13 @@
   }
   
   .addList {
-    width: 300px;
+    width: 150px;
     height: 60px;
     margin: 20px;
     border-radius: 15px;
     text-align: left;
 position: relative;
-left:1050px;
+left:980px;
     border: none;
     background-color: #757a7f;
     color: aliceblue;
@@ -74,12 +74,12 @@ left:1050px;
     margin: 0px 17px;
     margin-top: 20px;
     background-color: #101204;
-    width: 300px;
+    width: 200px;
     border-radius: 20px;
     height: min-content;
     display: flex;
     flex-direction: column;
-    left:1050px;
+    left:980px;
   }
   .addNewList input{
     background-color: #323231;

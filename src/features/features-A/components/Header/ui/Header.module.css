@@ -53,7 +53,8 @@
 .userMenu {
   position: absolute;
   top: 50px;
-  right: 0;
+right:-70px;
+z-index:3;
   background-color: #fff;
   border: 1px solid #e9e9e9;
   border-radius: 5px;
@@ -77,6 +78,7 @@
   min-width: 150px;
   color: #000;
   text-decoration: none;
+  z-index:3;
 }
 
 .userMenu a:hover {
