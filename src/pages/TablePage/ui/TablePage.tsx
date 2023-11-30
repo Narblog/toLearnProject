@@ -55,7 +55,7 @@ const TablePage:React.FC=()=>{
         
           {!addNewClicked ? (
             <button onClick={handleAddClick} className={styles.addList}>
-              + Add another list
+              + Add
             </button>
           ) : (
             <div className={styles.addNewList}>

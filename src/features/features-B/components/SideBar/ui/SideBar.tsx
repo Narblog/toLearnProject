@@ -30,7 +30,11 @@ const SideBar: React.FC = () => {
             className={styles.userimg}
           />:   <FaRegUser className={styles.icon} />
           }</div>
-          <h3>{user?.displayName}</h3>
+          {
+            user?.displayName?
+ <h3>{user?.displayName}</h3>: <h1>User</h1>
+          }
+         
         </div>
       </div>
       <div className={styles.line}></div>
@@ -73,12 +77,10 @@ const SideBar: React.FC = () => {
       <div className={styles.menu}>
 
         <ul>
-          <Link to="#">
+          <Link to="#Table">
             <li>    <FaRegClipboard   className={styles.tableIcon}/> Board 1</li>
           </Link>
-          <Link to="#">
-            <li>  <FaRegClipboard className={styles.tableIcon}/> Board 2</li>
-          </Link>
+         
         </ul>
       </div>
     </div>

@@ -1,94 +1,8 @@
-import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { EmailAuthProvider, GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../../../firebase"
-
-interface User{
-    uid: string,
-    email: string | null,
-    displayName: string | null;
-    photoURL: string | null;
-}
-
-export const loginWithGoogle = createAsyncThunk(
-  "user/loginWithGoogle",
-  async (_, {rejectWithValue}) => {
-    try{
-        const provider = new GoogleAuthProvider();
-        const result = await signInWithPopup(auth, provider);
-        const userData: User = {
-            uid: result.user.uid,
-            email: result.user.email,
-            displayName: result.user.displayName,
-            photoURL: result.user.photoURL
-        }
-
-        return userData;
-    }catch(error){
-        if(error instanceof Error) {
-            rejectWithValue('My Error message')
-        }else {
-            rejectWithValue('My error message')
-        }
-    }
-    
-  }
-);
-
-export const loginWithEmail = createAsyncThunk(
-  "user/loginWithEmail",
-  async (_, {rejectWithValue}) => {
-    try{
-        const provider = new EmailAuthProvider();
-        const result = await signInWithPopup(auth, provider);
-        const userData: User = {
-            uid: result.user.uid,
-            email: result.user.email,
-            displayName: result.user.displayName,
-            photoURL: result.user.photoURL
-        }
-
-        return userData;
-    }catch(error){
-        if(error instanceof Error) {
-            rejectWithValue('My Error message')
-        }else {
-            rejectWithValue('My error message')
-        }
-    }
-    
-  }
-);
-
-
-
-
-export const loginWithGithub = createAsyncThunk(
-  "user/loginWithGithub",
-  async (_, {rejectWithValue}) => {
-    try{
-        const provider = new GithubAuthProvider();
-        const result = await signInWithPopup(auth, provider);
-        console.log(result)
-        const userData: User = {
-            uid: result.user.uid,
-            email: result.user.email,
-            displayName: result.user.displayName,
-            photoURL: result.user.photoURL
-        }
-
-        return userData;
-    }catch(error){
-        if(error instanceof Error) {
-            rejectWithValue('My Error message')
-        }else {
-            rejectWithValue('My error message')
-        }
-    }
-    
-  }
-);
+import { PayloadAction,  createSlice } from "@reduxjs/toolkit";
+import {User} from "../store.interfaces"
 
 interface State{
+  photoURL: any;
   loading: boolean,
   error: string | null,
   profile: User | null,
@@ -98,6 +12,7 @@ const initialState: State= {
   loading: false,
   error: null,
   profile: null,
+  photoURL:null
 };
 
 const userSlice = createSlice({
@@ -109,39 +24,7 @@ const userSlice = createSlice({
   },
   },
   extraReducers: {
-    [loginWithGoogle.pending as any]: (state) => {
-      state.loading = true;
-    },
-    [loginWithGoogle.fulfilled as any]: (state, action) => {
-      state.loading = false;
-      state.profile = action.payload;
-    },
-    [loginWithGoogle.rejected as any]: (state, action) => {
-      state.loading = false;
-      state.error = action.error.message;
-    },
-    [loginWithGithub.pending as any]: (state) => {
-      state.loading = true;
-    },
-    [loginWithGithub.fulfilled as any]: (state, action) => {
-      state.loading = false;
-      state.profile = action.payload;
-    },
-    [loginWithGithub.rejected as any]: (state, action) => {
-      state.loading = false;
-      state.error = action.error.message;
-    },
-    [loginWithEmail.pending as any]: (state) => {
-      state.loading = true;
-    },
-    [loginWithEmail.fulfilled as any]: (state, action) => {
-      state.loading = false;
-      state.profile = action.payload;
-    },
-    [loginWithEmail.rejected as any]: (state, action) => {
-      state.loading = false;
-      state.error = action.error.message;
-    },
+   
   },
 });
 

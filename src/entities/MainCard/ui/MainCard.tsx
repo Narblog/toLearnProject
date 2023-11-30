@@ -85,19 +85,7 @@ const isOpen = (): void => {
             <div className={styles.addSave} onClick={onAddNewClick}>{newItemName!=="" ? <FaCheck className={styles.iconsX} />: <FaCircleXmark className={styles.iconsX}  />}</div>
           </div>
         )}
-        <div className={styles.allBtn} onClick={isOpen}>
-          <LuLayoutTemplate />
-        </div>
-        {
-          isTemplate ? (
-            <div className={styles.isTemplate}>
-             <h6>The template is a card</h6>
-            <input className={styles.input} type="text"/>
-            <p><BsPlusLg /> Create a new template</p>
-            <button>Change templates</button>
-            </div>
-          ) : null
-          }
+        
         
       </div>
     </div>

@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
             </nav>
             <div className={styles.box}>
                 <h2>ToLearn</h2>
-                <p>Learn Trello</p>
+                <p>Learn ToLearn</p>
 
                 <main >
                     <h3> ToLearn brings all your tasks, teammates, and tools together</h3>

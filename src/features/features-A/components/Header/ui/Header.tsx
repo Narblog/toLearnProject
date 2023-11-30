@@ -13,6 +13,7 @@ import { auth } from "../../../../../firebase";
 import { useSelector } from "react-redux";
 import { RootState } from "entities/firebase/store";
 import { FaUserGraduate } from "react-icons/fa6";
+import CreatePostPage from "entities/CreatePost/CreatePost";
 const Header: React.FC<HeaderProps | UserPageProps> = () => {
   const dispatch = useDispatch()
 
@@ -61,20 +62,7 @@ const Header: React.FC<HeaderProps | UserPageProps> = () => {
         {
           isCreate ? (
             <div className={styles.isCreate}>
-              <h1>Create Board</h1>
-              <img className={styles.imageBoard} src="https://images.ctfassets.net/rz1oowkt5gyp/4kCNudjaBYj90CGgG7Lict/cbafa67336b2007278f50d99ceabfb22/Boards_2x.png" alt="images" />
-              <div> Board title: <input type="text" required /></div>
-              <h6 ><FaClipboardQuestion />Enter the name of the board</h6>
-              <div> Visibility:  <select id="cars" className={styles.select} name="cars">
-                <option value="volvo">Yes</option>
-                <option value="saab">No</option>
-              </select></div>
-
-              <p className={styles.info}>You can add a few more boards to the workspace - 6 boards.
-                In the free version, workspaces can have up to 10 open boards.
-                To add more, please subscribe.</p>
-
-              <button className={styles.newBtn}>Create </button>
+            <CreatePostPage/>
             </div>
           ) : null
         }

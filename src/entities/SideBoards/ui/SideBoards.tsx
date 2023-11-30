@@ -9,7 +9,7 @@ const SideBoards:React.FC=()=>{
         <div className={styles.boards}>
              <Link to="/Table"> <FaTable /> Table</Link>
             <Link to="/Boards"><FaClipboard /> Boards</Link>
-            <Link to="/HomePage"><FaConfluence />Home Page</Link>
+            <Link to="/user"><FaConfluence />User Page</Link>
             <div>
             <div className={styles.line}></div>
            <p className={styles.WorkSpaces}>WorkSpaces  <BsPlusLg className={styles.icons}/></p>    

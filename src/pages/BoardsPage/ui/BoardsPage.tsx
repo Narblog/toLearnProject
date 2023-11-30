@@ -20,13 +20,13 @@ const BoardsPage: React.FC<HeaderProps> = () => {
                         <div>
                             <h3> <FaStar />Marked boards</h3>
                             <div className={styles.box}>
-                                <Board />  <Board />
+                                <Board />  
                             </div>
                         </div>
                         <div className={styles.inline}>
                             <h3>YOUR WORKSPACES</h3>
                             <div className={styles.box}>
-                                <Board />  <Board />  <Board />
+                                <Board />  
                             </div>
                         </div>
                     </div>

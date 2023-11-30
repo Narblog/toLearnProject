@@ -16,7 +16,7 @@ const UserPage: React.FC = () => {
                 <div className={styles.page}>
                     <div className={styles.person}>
                         {user?.photoURL ? (
-                            <img src={user.photoURL} alt="" className={styles.photo} />
+                            <img src={user?.photoURL} alt="" className={styles.photo} />
                         ) : (
                             <div>< FaUserGraduate  className={styles.icons}/></div>
                         )}

@@ -35,13 +35,14 @@
   }
   
   .addList {
-    width: 150px;
+    width: 60px;
     height: 60px;
     margin: 20px;
+    padding:5px;
     border-radius: 15px;
     text-align: left;
 position: relative;
-left:980px;
+left:1300px;
     border: none;
     background-color: #757a7f;
     color: aliceblue;
@@ -74,7 +75,7 @@ left:980px;
     margin: 0px 17px;
     margin-top: 20px;
     background-color: #101204;
-    width: 200px;
+    width: 300px;
     border-radius: 20px;
     height: min-content;
     display: flex;

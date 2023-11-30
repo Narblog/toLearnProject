@@ -1,27 +1,21 @@
 import {FC} from "react"
-import { auth } from '../../../firebase'
-import { GithubAuthProvider, signInWithPopup } from 'firebase/auth'
-import { FaGithub } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import styles from "./Signin.module.css"
+import { FaGithub } from "react-icons/fa"
+import { useAppDispatch } from "hooks/useAppDispatch";
+import { loginWithGithub } from "entities/firebase/Auth/loginWithGithub";
 
-
-
-const SignInWithGithub:FC=()=>{
+const SignInWithGithub: FC = () => {
     const navigate = useNavigate()
-    const signInGit = async () => {
-        const provider = new GithubAuthProvider();
-        try {
-            await signInWithPopup(auth, provider)
-                .then(result => {
-                    navigate("/User")
-                });
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    const dispatch = useAppDispatch()
+  
+    const signIn = async () => {
+      await dispatch(loginWithGithub())
+      navigate("/user")
+    }
+  
     return(
-        <button onClick={signInGit} className={styles.signingit}>
+        <button onClick={signIn} className={styles.signingit}>
         <FaGithub />
     </button>
     )
