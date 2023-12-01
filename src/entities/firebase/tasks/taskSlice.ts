@@ -20,13 +20,15 @@ const initialState: initialStateTasks = {
       tasks: [
         {
           id: 1,
-          name: "planning",
+          name: "Set up Google Drive",
+         
           comments: [
             {
               id: 1,
               author: {
                 id: 23,
                 name: "John",
+                image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
                 
               },
               text: "Lorem ipsum text",
@@ -36,7 +38,8 @@ const initialState: initialStateTasks = {
                   id: 1,
                   author: {
                     id: 26,
-                    name: "John"
+                    name: "John",
+                    image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
                    
                   },
                   text: "Lorem ipsum text",
@@ -49,7 +52,8 @@ const initialState: initialStateTasks = {
               id: 2,
               author: {
                 id: 25,
-                name: "John",
+                name: "After Class",
+                image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
                 
               },
               text: "Lorem ipsum text",
@@ -60,9 +64,10 @@ const initialState: initialStateTasks = {
                   author: {
                     id: 26,
                     name: "John",
+                    image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
                   
                   },
-                  text: "No",
+                  text: "No ",
                   date: new Date().toDateString(),
                 },
                 
@@ -72,8 +77,97 @@ const initialState: initialStateTasks = {
         },
         {
           id: 2,
-          name: "making",
-          comments: [],
+          name: "Set up Learning Management System",
+          comments:  [
+            {
+              id: 1,
+              author: {
+                id: 23,
+                name: "John ",
+                image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+               
+              },
+              text: "Lorem ipsum text 11",
+              date: new Date().toDateString(),
+              replies:  [
+                {
+                  id: 1,
+                  author: {
+                    id: 26,
+                    name: "John",
+                    image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+                  
+                  },
+                  text: "No ",
+                  date: new Date().toDateString(),
+                },
+                
+              ],
+            },
+          ],
+        },
+        {
+          id: 221,
+          name: "Correct Final Exam",
+          comments:  [
+            {
+              id: 14,
+              author: {
+                id: 29,
+                name: "John ",
+                image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+               
+              },
+              text: "Lorem ipsum text 11",
+              date: new Date().toDateString(),
+              replies:  [
+                {
+                  id: 31,
+                  author: {
+                    id: 36,
+                    name: "John",
+                    image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+                  
+                  },
+                  text: "No ",
+                  date: new Date().toDateString(),
+                },
+                
+              ],
+            },
+          ],
+        },
+     
+        {
+          id: 13,
+          name: "Web Enhance Class",
+          comments:  [
+            {
+              id: 94,
+              author: {
+                id: 48,
+                name: "John ",
+                image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+               
+              },
+              text: "Lorem ipsum text 11",
+              date: new Date().toDateString(),
+              replies:  [
+                {
+                  id: 12,
+                  author: {
+                    id: 27,
+                    name: "John",
+                    image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+                  
+                  },
+                  text: "No ",
+                  date: new Date().toDateString(),
+                },
+                
+              ],
+            },
+          ],
         },
       ],
     },
@@ -83,25 +177,52 @@ const initialState: initialStateTasks = {
       tasks: [
         {
           id: 3,
-          name: "John",
+          name: "Reflection Meeting",
           comments: [
             {
               id: 1,
               author: {
                 id: 23,
                 name: "John ",
+                image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
                
               },
-              text: "Lorem ipsum text",
+              text: "Lorem ipsum text ",
               date: new Date().toDateString(),
-              replies: [],
+              replies:  [
+                {
+                  id: 1,
+                  author: {
+                    id: 26,
+                    name: "John",
+                    image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+                  
+                  },
+                  text: "No ",
+                  date: new Date().toDateString(),
+                },
+                
+              ],
             },
           ],
         },
         {
           id: 4,
-          name: "using",
-          comments: [],
+          name: "Make Assignment 1",
+          comments:  [
+            {
+              id: 1,
+              author: {
+                id: 23,
+                name: "John ",
+                image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+               
+              },
+              text: "Lorem ipsum text 11",
+              date: new Date().toDateString(),
+              replies: [],
+            },
+          ],
         },
       ],
     },
@@ -111,25 +232,65 @@ const initialState: initialStateTasks = {
       tasks: [
         {
           id: 69,
-          name: "John",
+          name: "Reflection Meeting",
+          comments: [
+            {
+              id: 1,
+              author: {
+                id: 34,
+                name: "Write Syllabus",
+                image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+               
+              },
+              text: "Lorem ipsum text",
+              date: new Date().toDateString(),
+              replies:  [
+                {
+                  id: 1,
+                  author: {
+                    id: 26,
+                    name: "John",
+                    image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+                  
+                  },
+                  text: "No ",
+                  date: new Date().toDateString(),
+                },
+                
+              ],
+            },
+          ],
+        },
+        {
+          id: 28,
+          name: "Set up Online Textbook",
           comments: [
             {
               id: 1,
               author: {
                 id: 34,
                 name: "John ",
+                image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
                
               },
               text: "Lorem ipsum text",
               date: new Date().toDateString(),
-              replies: [],
+              replies:  [
+                {
+                  id: 1,
+                  author: {
+                    id: 26,
+                    name: "John",
+                    image:"https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdL9c3WA3ttAt5pfSBURmME=/user-photo-upload-example-2023-01-04%2000-00-00-2023-07-24%2020-02-59",
+                  
+                  },
+                  text: "No ",
+                  date: new Date().toDateString(),
+                },
+                
+              ],
             },
           ],
-        },
-        {
-          id: 28,
-          name: "Jack",
-          comments: [],
         },
       ],
     },

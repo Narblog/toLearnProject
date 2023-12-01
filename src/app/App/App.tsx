@@ -8,6 +8,7 @@ const RegisterPage = lazy(() => import('pages/RegisterPage'))
 const UserPage = lazy(() => import('pages/UserPage'))
 const TablePage = lazy(() => import('pages/TablePage'))
 const BoardsPage = lazy(() => import('pages/BoardsPage'))
+const NotFound=lazy(()=>import('pages/NotFound'))
 const App:React.FC=()=>{
  
  
@@ -22,6 +23,7 @@ const App:React.FC=()=>{
                 <Route path="/Register" element={<RegisterPage/>}/>
                 <Route path="/Login" element={<LoginPage/>}/>
                 <Route path="/Boards" element={<BoardsPage/>}/>
+                <Route path="*" element={<NotFound />} />
             </Routes>
             </Suspense>
         </div>

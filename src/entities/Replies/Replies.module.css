@@ -24,11 +24,11 @@
   }
   
   .replyInfo span {
-   color: #aaaaaa;
+   color: #000000;
    font-size: 10px;
   }
 
   .replyText{
     margin-top: 10px;
-    color: rgb(217, 224, 231);
+    color: rgb(0, 0, 0);
   }

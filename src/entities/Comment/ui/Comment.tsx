@@ -7,9 +7,13 @@ const Comment: React.FC<CommentIProps> = ({ comment }) => {
   return (
     <div className={styles.commentContainer}>
         <div className={styles.userInfo}>
-          <img src={comment.author.image} alt="UserPhoto" />
+          <div className={styles.info}>
+          <img src={comment.author.image} alt="UserPhoto" className={styles.image}/>
+          <p>{comment.author.name}</p>
+          </div>
+    
           <div>
-            <p>{comment.author.name}</p>
+          
             <span>{comment.date}</span>
             <div className={styles.commentText}>{comment.text}</div>
           </div>

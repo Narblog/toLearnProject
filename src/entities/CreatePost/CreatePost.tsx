@@ -21,7 +21,131 @@ const CreatePostPage = () => {
     return state.blog.error;
   });
 
+  const tasks= [
+    {
+      id: 1,
+      taskState: "Done",
+      tasks: [
+        {
+          id: 1,
+          name: "planning",
+          comments: [
+            {
+              id: 1,
+              author: {
+                id: 23,
+                name: "John",
+                
+              },
+              text: "Lorem ipsum text",
+              date: new Date().toDateString(),
+              replies: [
+                {
+                  id: 1,
+                  author: {
+                    id: 26,
+                    name: "John"
+                   
+                  },
+                  text: "Lorem ipsum text",
+                  date: new Date().toDateString(),
+                },
+                
+              ],
+            },
+            {
+              id: 2,
+              author: {
+                id: 25,
+                name: "John",
+                
+              },
+              text: "Lorem ipsum text",
+              date: new Date().toDateString(),
+              replies: [
+                {
+                  id: 1,
+                  author: {
+                    id: 26,
+                    name: "John",
+                  
+                  },
+                  text: "No",
+                  date: new Date().toDateString(),
+                },
+                
+              ],
+            },
+          ],
+        },
+        {
+          id: 2,
+          name: "making",
+          comments: [],
+        },
+      ],
+    },
+    {
+      id: 2,
+      taskState: "In Progress",
+      tasks: [
+        {
+          id: 3,
+          name: "John",
+          comments: [
+            {
+              id: 1,
+              author: {
+                id: 23,
+                name: "John ",
+               
+              },
+              text: "Lorem ipsum text",
+              date: new Date().toDateString(),
+              replies: [],
+            },
+          ],
+        },
+        {
+          id: 4,
+          name: "using",
+          comments: [],
+        },
+      ],
+    },
+    {
+      id: 3,
+      taskState: "End",
+      tasks: [
+        {
+          id: 69,
+          name: "John",
+          comments: [
+            {
+              id: 1,
+              author: {
+                id: 34,
+                name: "John ",
+               
+              },
+              text: "Lorem ipsum text",
+              date: new Date().toDateString(),
+              replies: [],
+            },
+          ],
+        },
+        {
+          id: 28,
+          name: "Jack",
+          comments: [],
+        },
+      ],
+    },
+  ]
 
+
+
+  
   const handleCreatePost = () => {
     dispatch(
       createPost({
