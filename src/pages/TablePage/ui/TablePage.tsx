@@ -3,9 +3,9 @@ import Header from "features/features-A/components/Header";
 import React, { useState } from "react";
 import styles from "./TablePage.module.css"
 import List from "entities/List";
-import { RootState } from "entities/firebase/store";
+import { RootState } from "entities/redux/store";
 import { useDispatch,useSelector } from "react-redux";
-import { addTask } from "entities/firebase/tasks/taskSlice";
+import { addTask } from "entities/redux/tasks/taskSlice";
 import Modal from "entities/Modal";
 import Comments from "entities/Comments";
 

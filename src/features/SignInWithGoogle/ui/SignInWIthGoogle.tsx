@@ -3,7 +3,7 @@ import {  FaGoogle } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import styles from "./SignInWithGoogle.module.css"
 import { useAppDispatch } from "hooks/useAppDispatch";
-import { loginWithGoogle } from "entities/firebase/Auth/loginWithGoogle";
+import { loginWithGoogle } from "entities/redux/Auth/loginWithGoogle";
 const SignInWithGoogle: FC = () => {
     const navigate = useNavigate()
     const dispatch = useAppDispatch()

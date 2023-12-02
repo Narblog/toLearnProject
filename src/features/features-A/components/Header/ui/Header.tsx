@@ -5,13 +5,12 @@ import { BsBellFill, BsBellSlash } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { HeaderProps } from "./Header.interface";
 import { UserPageProps } from "pages/UserPage/ui/UserPage.interface";
-import { FaClipboardQuestion } from "react-icons/fa6";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useDispatch } from "react-redux";
-import { setUser } from "entities/firebase/user/userSlice";
+import { setUser } from "entities/redux/user/userSlice";
 import { auth } from "../../../../../firebase";
 import { useSelector } from "react-redux";
-import { RootState } from "entities/firebase/store";
+import { RootState } from "entities/redux/store";
 import { FaUserGraduate } from "react-icons/fa6";
 import CreatePostPage from "entities/CreatePost/CreatePost";
 const Header: React.FC<HeaderProps | UserPageProps> = () => {
@@ -29,15 +28,7 @@ const Header: React.FC<HeaderProps | UserPageProps> = () => {
     signOut(auth).catch((error) => console.log(error));
   };
 
-
-
-
   const user = useSelector((state: RootState) => state.user.profile);
-
-
-
-
-
   const [isUserMenuOpen, setUserMenuOpen] = useState<boolean>(false)
   const [isBell, setIsBell] = useState<boolean>(false)
   const [isCreate, setIsCreate] = useState<boolean>(false)
@@ -56,13 +47,13 @@ const Header: React.FC<HeaderProps | UserPageProps> = () => {
       <div className={styles.headernavbar}>
         <Link to="/Boards"><h2>ToLearn</h2></Link>
         <Link to="/Table">WorkSpace</Link>
-        <span>Recent</span>
-        <span>Favorit</span>
+        <span className={styles.span}>Recent</span>
+        <span className={styles.span} >Favorit</span>
         <button className={styles.create} onClick={toggleisCreate}>Create</button>
         {
           isCreate ? (
             <div className={styles.isCreate}>
-            <CreatePostPage/>
+              <CreatePostPage />
             </div>
           ) : null
         }

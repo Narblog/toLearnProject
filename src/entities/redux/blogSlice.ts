@@ -1,4 +1,4 @@
-import { uploadImage } from './../lib/index';
+import { uploadImage } from '../lib/index';
 import {
   collection,
   getDocs,

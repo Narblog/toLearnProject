@@ -1,13 +1,11 @@
 import React,{useState} from "react";
-import { BsPlusLg } from "react-icons/bs";
 import { SlOptions } from "react-icons/sl"
-import { LuLayoutTemplate } from "react-icons/lu"
 import Card from "entities/Card/ui/Card";
 import { MainCardProps } from "./MainCard.interface";
 import styles from "./MainCard.module.css"
 import { Draggable,  } from "react-beautiful-dnd";
 import { useDispatch } from "react-redux";
-import { addItem } from "entities/firebase/tasks/taskSlice";
+import { addItem } from "entities/redux/tasks/taskSlice";
 import { FaCheck ,FaCircleXmark } from "react-icons/fa6";
 
 

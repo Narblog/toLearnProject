@@ -1,22 +1,14 @@
 import React, { useState } from "react";
 import { useAppDispatch } from "hooks/useAppDispatch";
 import { useSelector } from "react-redux";
-import { createPost } from "entities/firebase/blogSlice";
+import { createPost } from "entities/redux/blogSlice";
 import styles from "./CreatePost.module.css"
 
-import { Link } from "react-router-dom";
 const CreatePostPage = () => {
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
   const [image, setImage] = useState<File | null>(null);
-
-
   const dispatch = useAppDispatch();
-
-  const loding = useSelector((state: any) => {
-    return state.blog.loading;
-  });
-
   const error = useSelector((state: any) => {
     return state.blog.error;
   });
@@ -142,10 +134,6 @@ const CreatePostPage = () => {
       ],
     },
   ]
-
-
-
-  
   const handleCreatePost = () => {
     dispatch(
       createPost({

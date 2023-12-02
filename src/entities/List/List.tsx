@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./List.module.css"
 import {  TaskItemProps } from "pages/TablePage/ui/TablePage.interface";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import { changeDragDropItems } from "entities/firebase/tasks/taskSlice";
-import { RootState } from "entities/firebase/store";
+import { changeDragDropItems } from "entities/redux/tasks/taskSlice";
+import { RootState } from "entities/redux/store";
 import { useDispatch,useSelector } from "react-redux";
 import { TaskProps } from "pages/TablePage/ui/TablePage.interface";
 import MainCard from "entities/MainCard";
@@ -13,10 +13,6 @@ const List: React.FC = ({}) => {
   const tasks = useSelector((state: RootState) => {
     return state.tasks.tasks;
   });
-
-
-  
- 
   const onDragEnd = (result: any) => {
     const { source, destination} = result;
     
@@ -57,8 +53,7 @@ const List: React.FC = ({}) => {
         ...destinationColumn,
         tasks: newDestinationCards
       }
-      
-
+    
       dispatch(changeDragDropItems((tasks.map(column => {
         if (column.id=== newSourceColumn.id) return newSourceColumn;
         if (column.id === newDestinationColumn.id) return newDestinationColumn;
@@ -67,12 +62,6 @@ const List: React.FC = ({}) => {
       
     }
   }
-
-  
-
-  
-
-
   return (
     <DragDropContext onDragEnd={onDragEnd}>
     <div className={styles.Tableboard}>
@@ -98,9 +87,7 @@ const List: React.FC = ({}) => {
         }
           
         )
-      }
-       
-       
+      }   
       </div>
     </div>
     </DragDropContext>

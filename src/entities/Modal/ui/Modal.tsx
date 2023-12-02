@@ -1,8 +1,8 @@
 import { FC, ReactNode, useEffect, useRef,  } from 'react'
-import { clickChange } from 'entities/firebase/comments/commentsSlice';
+import { clickChange } from 'entities/redux/comments/commentsSlice';
 import styles from './Modal.module.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from 'entities/firebase/store';
+import { RootState } from 'entities/redux/store';
 
 interface ModalProps {
   children: ReactNode

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Signin.module.css"
 import { FaGithub } from "react-icons/fa"
 import { useAppDispatch } from "hooks/useAppDispatch";
-import { loginWithGithub } from "entities/firebase/Auth/loginWithGithub";
+import { loginWithGithub } from "entities/redux/Auth/loginWithGithub";
 
 const SignInWithGithub: FC = () => {
     const navigate = useNavigate()

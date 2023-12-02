@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, getAuth } from "firebase/auth"
 import SignInWithGithub from 'features/SignInWithGitHub';
 import SignInWithGoogle from "features/SignInWithGoogle"
 import { useAppDispatch } from "hooks/useAppDispatch";
-import { registerWithEmail } from "entities/firebase/Auth/registerWithEmail";
+import { registerWithEmail } from "entities/redux/Auth/registerWithEmail";
 
 
 

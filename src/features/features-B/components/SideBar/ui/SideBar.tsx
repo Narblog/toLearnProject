@@ -1,5 +1,5 @@
 import React from "react";
-import { RootState } from "entities/firebase/store";
+import { RootState } from "entities/redux/store";
 import { useSelector } from "react-redux";
 import {
   CiViewTable,
